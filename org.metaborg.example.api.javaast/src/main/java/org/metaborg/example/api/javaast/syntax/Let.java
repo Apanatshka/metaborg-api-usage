@@ -20,9 +20,9 @@ public class Let extends Expression {
 		return "let " + id + " = " + init + " in " + body + " end";
 	}
 
-	public IStrategoTerm toTerm(ITermFactory factory) {
+	public IStrategoTerm toIStrategoTerm(ITermFactory factory) {
 		return factory.makeAppl(factory.makeConstructor("Let", 2),
-		        factory.makeAppl(factory.makeConstructor("LetDecl", 2), factory.makeString(id), init.toTerm(factory)),
-		        body.toTerm(factory));
+		        factory.makeAppl(factory.makeConstructor("LetDecl", 2), factory.makeString(id), init.toIStrategoTerm(factory)),
+		        body.toIStrategoTerm(factory));
 	}
 }

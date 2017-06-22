@@ -16,7 +16,7 @@ public class IntLiteral extends Expression {
 		return Integer.toString(value);
 	}
 
-	public IStrategoTerm toTerm(ITermFactory factory) {
+	public IStrategoTerm toIStrategoTerm(ITermFactory factory) {
 		return factory.makeAppl(factory.makeConstructor("IntLiteral", 1), factory.makeString(Integer.toString(value)));
 	}
 }

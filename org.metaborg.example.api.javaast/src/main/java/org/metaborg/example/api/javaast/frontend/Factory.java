@@ -1,4 +1,4 @@
-package org.metaborg.example.api.javaast.parser;
+package org.metaborg.example.api.javaast.frontend;
 
 import org.metaborg.example.api.javaast.SpoofaxUtil;
 import org.metaborg.example.api.javaast.syntax.Add;

@@ -1,9 +1,10 @@
 package org.metaborg.example.api.javaast.syntax;
 
+import org.metaborg.example.api.javaast.frontend.ToIStrategoTerm;
 import org.spoofax.interpreter.terms.IStrategoTerm;
 import org.spoofax.interpreter.terms.ITermFactory;
 
-public class Root {
+public class Root implements ToIStrategoTerm {
 
 	protected final Expression exp; 
 	
@@ -17,7 +18,7 @@ public class Root {
 		return exp.toString();
 	}
 	
-	public IStrategoTerm toTerm(ITermFactory factory) {
-		return factory.makeAppl(factory.makeConstructor("Root", 1), exp.toTerm(factory));
+	public IStrategoTerm toIStrategoTerm(ITermFactory factory) {
+		return factory.makeAppl(factory.makeConstructor("Root", 1), exp.toIStrategoTerm(factory));
 	}
 }

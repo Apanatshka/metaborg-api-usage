@@ -25,7 +25,7 @@ public class Mul extends Expression {
 			return exp.toString();
 	}
 
-	public IStrategoTerm toTerm(ITermFactory factory) {
-		return factory.makeAppl(factory.makeConstructor("Mul", 2), left.toTerm(factory), right.toTerm(factory));
+	public IStrategoTerm toIStrategoTerm(ITermFactory factory) {
+		return factory.makeAppl(factory.makeConstructor("Mul", 2), left.toIStrategoTerm(factory), right.toIStrategoTerm(factory));
 	}
 }

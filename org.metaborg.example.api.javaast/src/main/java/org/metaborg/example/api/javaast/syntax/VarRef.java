@@ -16,7 +16,7 @@ public class VarRef extends Expression {
 		return id;
 	}
 
-	public IStrategoTerm toTerm(ITermFactory factory) {
+	public IStrategoTerm toIStrategoTerm(ITermFactory factory) {
 		return factory.makeAppl(factory.makeConstructor("VarRef", 1), factory.makeString(id));
 	}
 }

@@ -18,7 +18,7 @@ public class Add extends Expression {
 		return left + " + " + right;
 	}
 
-	public IStrategoTerm toTerm(ITermFactory factory) {
-		return factory.makeAppl(factory.makeConstructor("Add", 2), left.toTerm(factory), right.toTerm(factory));
+	public IStrategoTerm toIStrategoTerm(ITermFactory factory) {
+		return factory.makeAppl(factory.makeConstructor("Add", 2), left.toIStrategoTerm(factory), right.toIStrategoTerm(factory));
 	}
 }
